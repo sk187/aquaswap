@@ -44,13 +44,14 @@ get "/products/add" do
   erb :add
 end
 
-post "/products/add" do
+post "/user/add" do
   Product.create(
   product_name: params[:product_name],
   description: params[:description],
   image: params[:product_image],
   price: params[:price],
-  seller: @current_user.user_name
+  seller: @current_user.user_name,
+  quantity: params[:product_quantity]
     )
   redirect ("/products")
 end
@@ -60,8 +61,13 @@ get "/cart" do
   erb :cart
 end
 
-post "/cart/products" do
-  session[:cart] << params[:product_id]
+post "/cart/product_add" do
+  session[:cart] << params[:product_id_add]
+  redirect('/cart')
+end
+
+post "/cart/product_delete" do
+  session[:cart].delete(params[:product_id_delete])
   redirect('/cart')
 end
 
