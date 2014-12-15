@@ -7,9 +7,9 @@ CREATE TABLE products(
   product_name text NOT NULL,
   description text NOT NULL,
   image text NOT NULL,
-  price money NOT NULL CONSTRAINT positive_price CHECK (price>0),
+  price money NOT NULL,
   seller text NOT NULL,
-  quantity integer NOT NULL CONSTRAINT positive_quantity CHECK(quantity>0), 
+  quantity integer NOT NULL 
 );
 
 CREATE TABLE users(
@@ -23,7 +23,3 @@ CREATE TABLE products_users(
   product_id integer REFERENCES products,
   user_id integer REFERENCES users
 );
-
-CREATE TABLE user_baskets(
-  
-)
