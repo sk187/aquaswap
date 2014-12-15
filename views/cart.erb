@@ -1,9 +1,10 @@
 <p>Here is your shopping cart so far:</p>
-
 <ul>
-<% session[:cart].each do |product_name| %>
-  <li>
-    <h3><%= product_name %></h3>
-  </li>
-<% end %>
+ <% @cart_items.each do |item| %>
+  <li> <h3><%= item.product_name %></h3> </li>
+  <li> <p><%= item.description %></p> </li>
+  <li> <img src="<%= item.image %>"> </li>
+  <li> <p><%= item.price %></p> </li>
+  <li> <p><%= item.seller %></p> </li>
+<%end%>
 </ul>

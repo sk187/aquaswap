@@ -22,3 +22,7 @@ CREATE TABLE products_users(
   product_id integer REFERENCES products,
   user_id integer REFERENCES users
 );
+
+CREATE TABLE user_baskets(
+  
+)

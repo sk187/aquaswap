@@ -56,14 +56,12 @@ post "/products/add" do
 end
 
 get "/cart" do
+  @cart_items = Product.where(:id => session[:cart]) 
   erb :cart
 end
 
 post "/cart/products" do
-  product = Product.find_by(:id => params[:product_id])
-  if product
-    session[:cart] << product.product_name
-  end
+  session[:cart] << params[:product_id]
   redirect('/cart')
 end
 
