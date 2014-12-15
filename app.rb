@@ -44,6 +44,10 @@ get "/products/add" do
   erb :add
 end
 
+get "/products/my_swaps" do
+  erb :my_swaps
+end
+
 post "/user/add" do
   Product.create(
   product_name: params[:product_name],
