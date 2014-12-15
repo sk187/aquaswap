@@ -4,7 +4,7 @@
   <li> <h3><%= item.product_name %></h3> </li>
   <li> <p><%= item.description %></p> </li>
   <li> <img src="<%= item.image %>"> </li>
-  <li> <p><%= item.price %></p> </li>
+  <li> <p><%= "$#{item.price}" %></p> </li>
   <li> <p><%= item.seller %></p> </li>
 <%end%>
 </ul>
