@@ -40,6 +40,10 @@ get "/products" do
   erb :products
 end
 
+get "/products/add" do 
+  erb :add
+end
+
 get "/cart" do
   erb :cart
 end
