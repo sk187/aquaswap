@@ -7,7 +7,8 @@ CREATE TABLE products(
   product_name text NOT NULL,
   description text NOT NULL,
   image text NOT NULL,
-  price money NOT NULL
+  price money NOT NULL,
+  seller text NOT NULL
 );
 
 CREATE TABLE users(

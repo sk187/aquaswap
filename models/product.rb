@@ -6,6 +6,5 @@ class Product < ActiveRecord::Base
   validates :product_name, :presence => true
   validates :description, :presence => true
   validates :image, :presence => true
-  validates :price, :presence => true,
-    :numericality => true
+  validates :price, :presence => true, :numericality => true
 end

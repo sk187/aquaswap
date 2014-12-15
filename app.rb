@@ -44,6 +44,17 @@ get "/products/add" do
   erb :add
 end
 
+post "/products/add" do
+  Product.create(
+  product_name: params[:product_name],
+  description: params[:description],
+  image: params[:product_image],
+  price: params[:price],
+  seller: params[:seller]
+    )
+  redirect ("/products")
+end
+
 get "/cart" do
   erb :cart
 end
