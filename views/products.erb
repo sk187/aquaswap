@@ -5,6 +5,7 @@
     <strong>$<%= product.price %></strong>
     <p><%= product.description %></p>
     <img src="<%= product.image %>" class="product-img" />
+    <p><%= product.seller %> </p>
     <form action="/cart/products" method="post">
       <input type="hidden" name="product_id" value="<%= product.id %>" />
       <input type="submit" value="Add to Cart" />

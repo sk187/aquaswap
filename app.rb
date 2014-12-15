@@ -50,7 +50,7 @@ post "/products/add" do
   description: params[:description],
   image: params[:product_image],
   price: params[:price],
-  seller: params[:seller]
+  seller: @current_user.user_name
     )
   redirect ("/products")
 end
