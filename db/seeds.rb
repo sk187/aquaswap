@@ -2,11 +2,11 @@ require_relative "../models/user"
 require_relative "../models/product"
 
 User.create([
-  { :user_name => "Cookie Monster", :email => "cookie@monster.com", :password => "cookie", :password_confirmation => "cookie" }
+  { :user_name => "aquaswapper", :email => "aqua@swap.com", :password => "aqua", :password_confirmation => "aqua" }
 ])
 
 Product.create([
-  { :product_name => "Chocolate Chip Cookies", :description => "Ooey. Gooey. Delicious", :image => "http://nativemobile.com/wordpress/wp-content/uploads/2014/05/Verizons-Mobile-%E2%80%98Cookies%E2%80%99-Could-Take-the-Cake.jpg", :price => "4.75" },
-  { :product_name => "Nilla Wafers", :description => "Pretty darn good - if you like vanilla", :image => "http://upload.wikimedia.org/wikipedia/en/2/2d/Nilla-Wafers-Box-Small.jpg", :price => "3.50" },
-  { :product_name => "Oatmeal Raisin Cookies", :description => "Om nom nom", :image => "http://s3.amazonaws.com/gmi-digital-library/6ef2e27f-a9e5-43a4-ae2b-861c53e3ba73.jpg", :price => "2.99" },
+  { :product_name => "Crystal Red Shrimp", :description => "Grade SS", :image => "http://www.planetinverts.com/crsgradeguide/ss/ssnoentry.jpg", :price => "4.00", :seller => "aquaswapper" },
+  { :product_name => "Seiryu Stone", :description => "ADA Seiryu Stones for your hardscape", :image => "http://i.ebayimg.com/00/s/Njc0WDg5OQ==/$(KGrHqR,!jIFBe7dhiIMBQYBFPSCUw~~60_35.JPG", :price => "2.70", :seller => "aquaswapper" },
+  { :product_name => "Rimless Tank", :description => "Rimless Green Leaf Tank", :image => "http://glassbox-design.com/wp-content/uploads/2009/11/Green-Leaf-Aquarium-Rimless-Tank.png", :price => "96", :seller => "aquaswapper" },
 ])

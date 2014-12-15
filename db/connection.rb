@@ -3,5 +3,5 @@ require "active_record"
 ActiveRecord::Base.establish_connection(
   :adapter => "postgresql",
   :host => "localhost",
-  :database => "shopping_cart"
+  :database => "aqua_swap"
 )
